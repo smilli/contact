@@ -1,0 +1,97 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> <title>Contact</title> 
+	<link href="style/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="style/chat.css" rel="stylesheet" type="text/css" />
+</head> 
+<body> 
+
+<div id="container1" class="container">
+	<div class="row">
+		<div class="span8 offset2">
+			<div class="hero-unit">
+				<h1>Contact</h1>
+				<p class="lead">Everyone's favorite word game brought to the internet..</p>
+				<form class="form-inline" id="set-nickname"> 
+					<label for="nickname">Set a username:</label> 
+					<input name="nickname" type="text" id="nickname" /> 
+					<button type="submit" class="btn">Submit</button>
+				</form> 
+			</div>
+		</div>
+	</div>
+</div>
+	
+<div id="boxes" class="container-fluid">
+	<div id="boxesRow" class="row-fluid">
+		<!-- contact div contains all the contact related stuff !-->
+		<div id="contact" class="span8">
+			<div class="wrapper">
+				<div id="currentLetters" class="page-header row-fluid"><h1></h1></div>
+				<div id="startGameDiv" class="row-fluid">
+					<p id="introText" class="text-info lead"></p>
+					<p id="wordError" class="text-error"></p>
+					<form class="form-inline" id="start-game">
+						<label for="word">Word:</label>
+						<input name="secretWord" type="text" id="secretWord" maxlength="18"/>
+						<button type="submit" class="btn">Start Game</button>
+					</form> 
+				</div>
+				<div id="hints" class="row-fluid"></div>
+			</div>
+			<div id="send-hint" class="row-fluid">
+				<form class="form-inline" id="guessForm">
+					<div class="span6">
+						<div id="hintControl" class="control-group">
+							<label id="hintLabel" class="control-label" for="hint"></label>
+							<div class="controls">
+								<input type="text" id="hint" maxlength="255" placeholder="Hint" name="hint"/>
+							</div>
+						</div>
+					</div>
+					<div class="span4">
+						<div id="guessControl" class="control-group">
+							<label id="guessLabel" class="control-label" for="guess"></label>
+							<div class="controls">
+								<input type="text" id="guess" maxlength="255" placeholder="Guess" name="guess"/>
+							</div>
+						</div>
+					</div>
+					<div class="span1">
+						<div class="control-group">
+							<label class="control-label"></label>
+							<div class="controls">
+								<button type="submit" class="btn btn-primary inline" id="createHint">Enter</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div> 
+		<!-- this div has all the chat stuff !-->
+		<div id="chat" class="span4">	
+			<div class="wrapper">
+				<!-- displays online users !-->
+				<div id="nicknames" class="row-fluid">
+					<b>Users:</b>
+					<!-- ** Display "3 users required" when <3 connected ** !-->
+					<ul class="inline"></ul>
+				</div>
+				<div id="messages" class="row-fluid" ></div>
+			</div>
+			<div id="send-message" class="row-fluid"><textarea id="message" rows="1" maxlength="2000"></textarea></div>
+		</div>
+	</div>
+</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+	<script src="/socket.io/socket.io.js"></script> 
+	<script src="/script/masonry.min.js"></script>
+	<script src="/script/resize.min.js"></script>
+	<script src="/script/autosize.min.js"></script>
+	<script src="/script/jquery-ui-1.10.2.custom.min.js"></script>
+	<script src="/script/jquery.validate.min.js"></script>
+	<script src="/script/main.js"></script> 
+</body> 
+</html>

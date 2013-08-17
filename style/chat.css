@@ -1,0 +1,208 @@
+body, html, #boxesRow, #boxes, #contact, #chat{
+	height: 100%;
+	overflow: hidden;
+}
+
+#contact, #chat{
+	position: relative;
+}
+
+body{
+	font-family: Tahoma, Helvetica, sans-serif;
+	margin: 1px;
+	font-size: 12px;
+	text-align: left;
+	background-color: #E0975B;
+}
+
+#container1{
+	margin-top: 20px;
+}
+
+.hero-unit{
+	background-color: #FFEDC8;
+	text-align: center;
+}
+
+.hero-unit p{
+	color: #3BB6B6;
+	text-shadow: 1px 1px 1px #000;
+    filter: dropshadow(color=#000, offx=1, offy=1);
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 24px;
+}
+
+.hero-unit label{
+	color: #41A0A0;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+.hero-unit h1{
+	color: #4D71C3;
+	text-transform: uppercase;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	/* font-family: Impact, Charcoal, sans-serif; */
+	font-size: 100px;
+}
+
+#boxes{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box;
+	display:none;
+}
+
+.wrapper{
+	min-height: 100%;
+}
+
+#hints{
+	word-wrap: break-word;
+	padding-bottom: 100px;
+}
+#messages{
+	word-wrap: break-word;
+	overflow-y: auto;
+	padding-bottom: 100px;
+}
+
+/* Box with all contact hints, needs to be relative for masonry */
+#hints{
+	position: relative;
+}
+
+#messages{
+	position: absolute;
+	top: 50px;
+	bottom: 100px; 
+	left: 0; 
+	right: 0;
+	overflow: auto;
+	display: block;
+	background-color: #CEEAE8;
+	padding: 5px;
+}
+
+#send-hint, #send-message{
+	margin-top: -100px;
+	height: 100px;
+	clear: both;
+	overflow:hidden;
+	position:relative;
+	bottom:0;
+}
+
+#contact{
+	border-right: 2px dashed #7D9A99;
+}
+
+#chat{
+	margin: 0px;
+	background-color: #A1D4D2;
+}
+
+#chat, #contact, #messages, #send-message{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box; 
+}
+
+#startGameDiv{
+	text-align: center;
+}
+
+/* box to enter hint in */
+#hint{
+	width: 100%;
+}
+
+#guess{
+	width: 100%;
+}
+
+#guessForm .control-label{
+	height: 20px;
+	display: block;
+}
+
+/* An individual guess */
+.openGuess{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box; 
+	width: 175px;
+	margin: 10px;
+	float: left;
+	height: auto;
+	text-align: center;
+}
+
+#currentLetters h1{
+	color: #4C7ADB;
+	font-size: 64px;
+}
+
+.countdown{
+	text-align: center;
+	margin: auto;
+	width: 25px;
+	display: block;
+}
+
+.reactBox { 
+width: 100px; 
+margin-left: auto;
+margin-right: auto;
+}
+
+.item{
+	margin-bottom: 6px
+}
+
+#nicknames { 
+	color: gray;
+	text-align: center;
+	border-bottom: 1px solid;
+	overflow: auto;
+} 
+
+#nicknames ul{
+	color: #fff;
+}
+
+#messages p strong { margin-right: 5px; } 
+#message{ 
+	width: 96%; 
+	resize: none;
+	height: 10px;
+	max-height: 70px;
+}
+
+.deleteText{
+	position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FFF;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb {
+    background: #CCC;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #AAA;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #888;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
